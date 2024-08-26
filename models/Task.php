@@ -30,8 +30,11 @@ class Task extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            //required
             [['title', 'description'], 'required'],
+            //integer
             [['due_date', 'status', 'priority'], 'integer'],
+            //string
             [['title'], 'string', 'max' => 100],
             [['description'], 'string', 'max' => 255],
         ];

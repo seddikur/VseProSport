@@ -14,7 +14,7 @@ class m231102_073936_seed_task_table extends Migration
     {
         {
             $faker = \Faker\Factory::create();
-            for ($i = 0; $i < 505; $i++) {
+            for ($i = 0; $i < 20500; $i++) {
                 $this->insert(
                     'task',
                     [

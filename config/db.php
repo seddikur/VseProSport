@@ -7,10 +7,10 @@ return [
     'username' => 'yii',
     'password' => 'yii',
     'charset' => 'utf8',
-//    'enableSchemaCache' => true,
-//    'enableQueryCache' => false,
-//    'schemaCacheDuration' => 3600,
-//    'schemaCache' => 'cache',
+    'enableSchemaCache' => true,
+    'enableQueryCache' => false,
+    'schemaCacheDuration' => 3600,
+    'schemaCache' => 'cache',
 
 
 //    'class' => 'yii\db\Connection',
