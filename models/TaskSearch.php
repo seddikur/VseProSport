@@ -40,13 +40,36 @@ class TaskSearch extends Task
      */
     public function search($params)
     {
-        $query = Task::find();
+//        $query = Task::find();
 
-        // add conditions that should always apply here
+        // Обращаемся к кэшу приложения
+        $cache = \Yii::$app->cache;
+        // Формируем ключ
+        $key = 'task_key_cache';
+
+
+
+        // Вариант 1
+//        $query = $cache->getOrSet($key, function () {
+//            return Task::find();
+//        });
+
+        //Вариант2
+        // Кэширование запросов для ActiveRecord (на 1 час)
+        // Возвращает объект
+        $query = Task::getDb()->cache(function (){
+            return Task::find();
+        }, 3600);
+
+        // Очитит кэш всего приложения
+//        \Yii::$app->cache->flush();
+
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
+
+
 
         $this->load($params);
 
