@@ -1,9 +1,10 @@
 <?php
 
-namespace app\controllers;
+namespace app\modules\admin\controllers;
 
 use app\models\Task;
 use app\models\TaskSearch;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -21,6 +22,16 @@ class TaskController extends Controller
         return array_merge(
             parent::behaviors(),
             [
+//                'access' => [
+//                    'class' => AccessControl::class,
+//                    'rules' => [
+//                        [
+//                            'actions' => ['index', 'view', 'create', 'update'],
+//                            'allow' => true,
+//                            'roles' => ['@'],
+//                        ],
+//                    ],
+//                ],
                 'verbs' => [
                     'class' => VerbFilter::className(),
                     'actions' => [

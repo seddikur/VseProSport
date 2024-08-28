@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
-    <?php GridView::widget([
+    <?php echo GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
@@ -44,16 +44,6 @@ $this->params['breadcrumbs'][] = $this->title;
         ],
     ]); ?>
 
-    <?= \yii\widgets\ListView::widget([
-        'model' => $dataProvider,
-        'attributes' => [
-            'title',
-            'description',
-            'due_date:datetime',
-            'status',
-            'priority',
-        ],
-    ]);?>
 
 
 </div>

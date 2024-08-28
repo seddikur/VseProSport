@@ -21,7 +21,8 @@
         "box/spout": "^2.7",
         "dompdf/dompdf": "^2.0",
         "phpoffice/phpexcel": ">=1.8.1",
-        "phpoffice/phpword": ">=v0.12.1 "
+        "phpoffice/phpword": ">=v0.12.1 ",
+        "npm-asset/bootstrap-icons": "^1.11"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
